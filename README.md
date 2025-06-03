@@ -12,6 +12,7 @@ This repository contains a Docker container for serving inference requests from 
 ## Model Choice
 - Model: `distilbert-base-uncased-finetuned-sst-2-english`
 - Reason: Lightweight (~260MB), fast for sentimental analysis.
+- Larger models like bert-base-uncased (~440MB) or roberta-large (~1.3GB) were considered but rejected due to higher memory and latency requirements, which could strain the VM.
 
 ## Colab Notebook
 Run the notebook: (https://colab.research.google.com/drive/14jCTBVR2ySq44y21LXSTG7f-uvDrs-PZ?usp=sharing)
