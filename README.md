@@ -1,6 +1,6 @@
 # HuggingFace Inference Container Demo
 
-This repository contains a Docker container for serving inference requests from HuggingFace models, with NGINX,>
+This repository contains a Docker container for serving inference requests from HuggingFace models, with NGINX, Gunicorn, and Uvicorn for parallel request handling, and a Google Colab notebook for demonstrating parallel POST requests.
 
 ## Files
 - `Dockerfile`: Builds the container using `tiangolo/uvicorn-gunicorn-fastapi:python3.11`.
