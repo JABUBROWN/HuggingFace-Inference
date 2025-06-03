@@ -1,18 +1,19 @@
 # HuggingFace Inference Container Demo
 
 This repository contains a Docker container for serving inference requests from HuggingFace models, with NGINX, Gunicorn, and Uvicorn for parallel request handling, and a Google Colab notebook for demonstrating parallel POST requests.
+![diagram-export-03-06-2025-20_50_49](https://github.com/user-attachments/assets/d8a2b10f-5d7a-4617-9cd9-da438a771ebc)
 
+## Model Choice
+- Model: `distilbert-base-uncased-finetuned-sst-2-english`
+- Reason: Lightweight (~260MB), fast for sentimental analysis.
+- Larger models like bert-base-uncased (~440MB) or roberta-large (~1.3GB) were considered but rejected due to higher memory and latency requirements, which could strain the VM.
+  
 ## Files
 - `Dockerfile`: Builds the container using `tiangolo/uvicorn-gunicorn-fastapi:python3.11`.
 - `requirements.txt`: Lists dependencies (`fastapi`, `transformers`, etc.).
 - `app/main.py`: FastAPI app with `/predict` endpoint for sentiment analysis using DistilBERT.
 - `nginx.conf`: NGINX configuration for proxying requests.
 - `demo.ipynb`: Google Colab notebook for parallel POST requests.
-
-## Model Choice
-- Model: `distilbert-base-uncased-finetuned-sst-2-english`
-- Reason: Lightweight (~260MB), fast for sentimental analysis.
-- Larger models like bert-base-uncased (~440MB) or roberta-large (~1.3GB) were considered but rejected due to higher memory and latency requirements, which could strain the VM.
 
 ## Colab Notebook
 Run the notebook: (https://colab.research.google.com/drive/14jCTBVR2ySq44y21LXSTG7f-uvDrs-PZ?usp=sharing)
