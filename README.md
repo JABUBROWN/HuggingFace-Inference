@@ -14,6 +14,7 @@ This repository contains a Docker container for serving inference requests from 
 - `requirements.txt`: Lists dependencies (`fastapi`, `transformers`, etc.).
 - `app/main.py`: FastAPI app with `/predict` endpoint for sentiment analysis using DistilBERT.
 - `nginx.conf`: NGINX configuration for proxying requests.
+- `demo.mp4`: Screen recording walkthrough of the solution. 
 
 ## Colab Notebook
 Run the notebook: (https://colab.research.google.com/drive/14jCTBVR2ySq44y21LXSTG7f-uvDrs-PZ?usp=sharing)
