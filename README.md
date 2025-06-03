@@ -19,7 +19,7 @@ Run the notebook: (https://colab.research.google.com/drive/14jCTBVR2ySq44y21LXST
 
 ## Setup Instructions
 1. Build: `docker build -t hf-inference .`
-2. Run: `docker run -d --name hf-app -v /tmp:/tmp hf-inference gunicorn -k uvicorn.workers.UvicornWorker -b uni>
+2. Run: `docker run -d --name hf-app -v /tmp:/tmp hf-inference gunicorn -k uvicorn.workers.UvicornWorker -b unix:/tmp/gunicorn.sock -w 4 --timeout 120 main:app`
 3. Install NGINX: `sudo apt install nginx`
 4. Configure NGINX: `sudo cp nginx.conf /etc/nginx/nginx.conf && sudo systemctl restart nginx`
 5. Test(Locally): `curl -X POST "http://localhost/predict" -H "Content-Type: application/json" -d '{"text": "I >
