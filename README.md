@@ -1,7 +1,8 @@
 # HuggingFace Inference Container Demo
 
 This repository contains a Docker container for serving inference requests from HuggingFace models, with NGINX, Gunicorn, and Uvicorn for parallel request handling, and a Google Colab notebook for demonstrating parallel POST requests.
-![diagram-export-03-06-2025-20_50_49](https://github.com/user-attachments/assets/d8a2b10f-5d7a-4617-9cd9-da438a771ebc)
+![system-architecture](https://github.com/user-attachments/assets/6b739858-fd81-4aa8-b324-bf2be728118b)
+
 
 ## Model Choice
 - Model: `distilbert-base-uncased-finetuned-sst-2-english`
